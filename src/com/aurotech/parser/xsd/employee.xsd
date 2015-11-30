@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.aurotech.com/parser/xsd" 
+xmlns:tkp="http://www.aurotech.com/parser/xsd">
+<xs:element name="employee" type="tkp:employeeType"></xs:element>
+
+<xs:complexType name="employeeType">
+   <xs:sequence>
+<xs:element ref="tkp:empName" minOccurs='1' maxOccurs="1"/>
+ <xs:element ref="tkp:address" minOccurs='1' maxOccurs='unbounded'/>
+</xs:sequence>
+</xs:complexType>
+
+
+
+
+  <xs:complexType name="addressType">
+   <xs:sequence>
+     <xs:element ref="tkp:name" minOccurs='0' maxOccurs='1'/>
+     <xs:element ref="tkp:street" minOccurs='0' maxOccurs='1'/>
+   </xs:sequence>
+  </xs:complexType>
+
+
+ <xs:element name="name" type='xs:string'/>
+ <xs:element name="street" type='xs:string'/>
+ <xs:element name="empName" type='xs:string'/>
+  <xs:element name="address" type='tkp:addressType'/>
+</xs:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tkp="http://www.aurotech.com/parser/xsd" 
+	xs:noNamespaceSchemaLocation="http://www.aurotech.com/parser/xsd/employee.xsd">
+	<tkp:empName>Test</tkp:empName>
+	<tkp:address>
+		<tkp:name>JoeTester</tkp:name>
+		<tkp:street>Bakerstreet5</tkp:street>
+	</tkp:address>
+</employee>
